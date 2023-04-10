@@ -1,3 +1,7 @@
+// ignore_for_file: unused_element
+
+import 'dart:math';
+
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
@@ -27,6 +31,20 @@ class _TransactionUserState extends State<TransactionUser> {
       date: DateTime.now(),
     )
   ];
+
+  _addTransaction(String title, double value) {
+    final newTransaction = Trasnsactions(
+      id: Random().nextBool().toString(),
+      title: title,
+      value: value,
+      date: DateTime.now(),
+    );
+
+    setState(() {
+      _transactions.add(newTransaction);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
