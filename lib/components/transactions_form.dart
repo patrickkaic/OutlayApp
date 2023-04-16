@@ -33,7 +33,6 @@ class TransactionForm extends StatelessWidget {
           children: [
             TextField(
               controller: titleController,
-              onSubmitted: (value) => _submitForm(),
               decoration: InputDecoration(
                 labelText: 'Título',
               ),
